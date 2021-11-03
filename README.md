@@ -1,6 +1,7 @@
  if you don't know how to pull git, run your powershell following these step:
 
-    git clone https://github.com/codeorafk/cnpm.git Now, all file in your root directory
+    git clone https://github.com/codeorafk/cnpm.git 
+Now, all file in your root directory
 -------------------------------------------------------------------------------------------------------------------
 firstly, to make new branch for you, run your powershell following these step:
 
