@@ -130,7 +130,7 @@ section{
 }
 
 .post{
-  border: 0.8px solid #dedede
+  border: 0.8px solid #dedede;
 }
 
 .icons{
@@ -262,4 +262,35 @@ section{
 .button{
   border: none;
   background-color: #fafafa;
+}
+
+.sm-avatar img{
+  border-radius: 50%;
+}
+
+.list-follow{
+  position: fixed;
+  width: 300px;
+}
+.follow-btn{
+  font-size: 12px;
+  border: none;
+  color: #21a2f7;
+  background-color: #fafafa;
+  line-height: 18px;
+  font-weight: 600;
+}
+ul{
+  padding-left: 0px;
+  list-style:none;
+}
+.to-follow li{
+  display: flex;
+}
+
+.header-post{
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
