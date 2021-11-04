@@ -75,6 +75,7 @@ body {
 
 .navigation-icons {
   display: flex;
+  height: 30;
 }
 
 .navigation-search-container input:focus {
@@ -246,6 +247,19 @@ section{
 }
 
 .posts_profile{
-  display: flex;
   margin: 30px 0px;
+}
+
+.modal-dialog{
+  margin: 5% auto;
+  max-width: 60%;
+}
+
+.img{
+  padding: 0px;
+}
+
+.button{
+  border: none;
+  background-color: #fafafa;
 }
