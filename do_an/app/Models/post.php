@@ -13,5 +13,5 @@ class post extends Model
     
     protected $primarykey = 'id';
 
-    protected $fillable = ['username', 'n_likes', 'description'];
+    protected $fillable = ['username', 'n_likes', 'description', 'image_path'];
 }

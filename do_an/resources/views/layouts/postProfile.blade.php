@@ -3,7 +3,7 @@
     <div class= "col-sm-4">
 
       <!-- Trigger the modal with a button -->
-      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#Modal_{{$posts->id}}"><img class="card-img" src="https://previews.123rf.com/images/uniyok/uniyok1711/uniyok171100022/89491020-template-design-square-banner-with-pop-texture-background-poster-for-offer-and-presentation-on-abstr.jpg" alt="Card image" style="width:100%" /></button>
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#Modal_{{$posts->id}}"><img class="card-img" src="{{asset('images/'.$posts->image_path)}}" alt="Card image" style="width:100%" /></button>
 
                     <!-- Modal -->
       <div class="modal" id="Modal_{{$posts->id}}">
@@ -14,7 +14,7 @@
               <div class="row">
                 <div class = "col-lg-7 col-md-6 col-12">
                   <div class="img">
-                    <img class="card-img-top" src="https://previews.123rf.com/images/uniyok/uniyok1711/uniyok171100022/89491020-template-design-square-banner-with-pop-texture-background-poster-for-offer-and-presentation-on-abstr.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="{{asset('images/'.$posts->image_path)}}" alt="Card image" style="width:100%">
                   </div>
                 </div>
                 <div class= "col-lg-5 col-md-6 col-12">
@@ -26,7 +26,7 @@
                             &emsp;
                           </span>
                         <span>
-                          <p> UowY </p>
+                          <p> {{ Auth::user()->name }} </p>
                         </span>
                       </div>
                       <div class="col-1">

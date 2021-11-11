@@ -9,8 +9,12 @@
       </ul>
     </div>
     <div class="col-9" style="padding-left: 50px">
-      <form action ="/profile" method="POST">
+      <form action ="/profile" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="row">
+          <label class="form-text"> Image</label>
+          <input type="file" class="form-input" name="image">
+        </div>
         <div class="row">
           <lable class="form-text"> username</lable>
           <input class="form-input" type="text" name="username" placeholder="username">

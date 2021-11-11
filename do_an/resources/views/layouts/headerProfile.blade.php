@@ -5,7 +5,7 @@
 </div>
 <div class="information col-md-8">
   <div class="container_1">
-    <h2> UowY </h2>
+    <h2> {{auth::user()->name}} </h2>
     <a href="profile/create"> Edit profile</a>
   </div>
   <ul class="container_2">

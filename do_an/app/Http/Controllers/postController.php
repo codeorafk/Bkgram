@@ -37,10 +37,13 @@ class postController extends Controller
      */
     public function store(Request $request)
     {
+        $newImageName = time() .'.'. $request->image->extension();
+        $request->image->move(public_path('images'),$newImageName);
         $posts = post::create([  
             'username' => $request->input('username'),
             'n_likes' => $request->input('n_likes'),
             'description' => $request->input('description'),
+            'image_path' => $newImageName
         ]);
     }
 

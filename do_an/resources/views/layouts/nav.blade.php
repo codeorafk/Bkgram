@@ -3,7 +3,17 @@
     Bkgram
   </a>
 </div>
-<div class="navigation-search-container">
+  @guest
+  <div class="navigation-icons">
+    @if(Route::has('login'))
+      <a href="{{ route('login') }}" class="navigation-link" style = "margin-right: 20px"> {{ __('Login') }}</a>
+    @endif
+    @if(Route::has('register'))
+      <a href="{{ route('register') }}" class="navigation-link"> {{ __('Register') }}</a>
+    @endif
+</div>
+  @else
+  <div class="navigation-search-container">
   <i class="fa fa-search"></i>
   <input class="search-field" type="text" placeholder="Search">
   <div class="search-container">
@@ -14,7 +24,7 @@
   </div>
 </div>
 <div class="navigation-icons">
-  <a href="/" class="navigation-link">
+  <a href="/home" class="navigation-link">
     <i class="far fa-compass">
       <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
 <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
@@ -36,12 +46,19 @@
 </svg>
     </i>
   </a>
-  <a href="#" id="signout" class="navigation-link">
-    <i class="fas fa-sign-out-alt" >
-      <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-<path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-</svg>
-    </i>
-  </a>
+  <div class="logout">
+    <a href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" id="signout" class="navigation-link">   
+      <i class="fas fa-sign-out-alt" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+  </svg>
+      </i>
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+      @csrf
+    </form>
+  </div>
+  @endguest
 </div>
