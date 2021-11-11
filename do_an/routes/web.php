@@ -16,7 +16,11 @@ use App\Http\Controllers\profileController;
 */
 
 
-Route::resource('/profile', profileController::class);
+Route::resource('/profile', postController::class);
+
+Route::get('/edit', function () {
+    return view('profile.edit');
+});
 
 Route::get('/', function () {
     return view('home');

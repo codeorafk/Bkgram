@@ -361,3 +361,40 @@ ul{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.sidebar{
+  border-right: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.form-text{
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+.form-input{
+  height: 20%;
+}
+
+.submit button{
+  margin-top: 20px;
+  margin-left: 100px;
+  font-weight: 600;
+  color: black;
+  padding: 3px 10px;
+  background-color: #fafafa;
+  border: 2px solid #e6e6e6;
+  border-radius: 5%;
+}
+
+.submit button:hover{
+  margin-top: 20px;
+  margin-left: 100px;
+  font-weight: 600;
+  color: #fafafa;
+  padding: 3px 10px;
+  background-color: black;
+  border: 2px solid #e6e6e6;
+  border-radius: 5%;
+}
+
+

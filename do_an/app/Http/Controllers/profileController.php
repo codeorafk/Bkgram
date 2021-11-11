@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\post;
 
-
 class profileController extends Controller
 {
     /**
@@ -15,8 +14,7 @@ class profileController extends Controller
      */
     public function index()
     {
-        $posts = post::all();
-        return view('post.profile', ['posts'=> $posts]);
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class profileController extends Controller
      */
     public function create()
     {
-        return view('post.create');
+        //
     }
 
     /**
@@ -37,11 +35,7 @@ class profileController extends Controller
      */
     public function store(Request $request)
     {
-        $posts = post::create([  
-            'username' => $request->input('username'),
-            'n_likes' => $request->input('n_likes'),
-            'description' => $request->input('description'),
-        ]);
+        //
     }
 
     /**
@@ -63,8 +57,7 @@ class profileController extends Controller
      */
     public function edit($id)
     {
-        $posts = post::find($id)->first();
-        return view('post.edit',['posts'=>$posts]);
+        //
     }
 
     /**
@@ -76,13 +69,7 @@ class profileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $posts = post::where('id', $id)
-            ->update([  
-            'username' => $request->input('username'),
-            'n_likes' => $request->input('n_likes'),
-            'description' => $request->input('description'),
-        ]);
-        return redirect('/profile');
+        //
     }
 
     /**
@@ -93,9 +80,6 @@ class profileController extends Controller
      */
     public function destroy($id)
     {
-        $posts = post::find($id)->first();
-        $posts->delete();
-
-        return redirect('/profile');
+        //
     }
 }
