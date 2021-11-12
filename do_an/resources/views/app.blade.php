@@ -9,12 +9,15 @@
     <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}">
   </head>
   <body>
-    <div class="navigation">
-      @include('layouts.nav')
-    </div>
-    <div class="container">
-      @yield('content')  
-    </div>
+    
+    <main class="py-4">
+      <div class="navigation">
+        @include('layouts.nav')
+      </div>
+      <div class="container">
+        @yield('content')  
+      </div>
+    </main>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
   </body>
 </html>

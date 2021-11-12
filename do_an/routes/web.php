@@ -19,5 +19,9 @@ use App\Http\Controllers\profileController;
 Route::resource('/profile', profileController::class);
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
