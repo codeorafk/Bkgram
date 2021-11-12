@@ -1247,6 +1247,7 @@
             "time": "2021-09-28T15:47:34+00:00"
         },
         {
+<<<<<<< Updated upstream
             "name": "laravel/ui",
             "version": "v3.3.2",
             "source": {
@@ -1266,8 +1267,46 @@
                 "illuminate/support": "^8.42",
                 "illuminate/validation": "^8.42",
                 "php": "^7.3|^8.0"
+=======
+            "name": "league/commonmark",
+            "version": "1.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c4228d11e30d7493c6836d20872f9582d8ba6dcf",
+                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "scrutinizer/ocular": "1.7.*"
+            },
+            "require-dev": {
+                "cebe/markdown": "~1.0",
+                "commonmark/commonmark.js": "0.29.2",
+                "erusev/parsedown": "~1.0",
+                "ext-json": "*",
+                "github/gfm": "0.29.0",
+                "michelf/php-markdown": "~1.4",
+                "mikehaertl/php-shellcommand": "^1.4",
+                "phpstan/phpstan": "^0.12.90",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.2",
+                "scrutinizer/ocular": "^1.5",
+                "symfony/finder": "^4.2"
+>>>>>>> Stashed changes
+            },
+            "bin": [
+                "bin/commonmark"
+            ],
             "type": "library",
+<<<<<<< Updated upstream
             "extra": {
                 "branch-alias": {
                     "dev-master": "3.x-dev"
@@ -1278,6 +1317,8 @@
                     ]
                 }
             },
+=======
+>>>>>>> Stashed changes
             "autoload": {
                 "psr-4": {
                     "Laravel\\Ui\\": "src/",
@@ -1294,12 +1335,18 @@
                     "email": "taylor@laravel.com"
                 }
             ],
+<<<<<<< Updated upstream
             "description": "Laravel UI utilities and presets.",
+=======
+            "description": "Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and Github-Flavored Markdown (GFM)",
+            "homepage": "https://commonmark.thephpleague.com",
+>>>>>>> Stashed changes
             "keywords": [
                 "laravel",
                 "ui"
             ],
             "support": {
+<<<<<<< Updated upstream
                 "source": "https://github.com/laravel/ui/tree/v3.3.2"
             },
             "time": "2021-11-05T08:25:44+00:00"
@@ -1377,6 +1424,13 @@
                 "rss": "https://github.com/thephpleague/commonmark/releases.atom",
                 "source": "https://github.com/thephpleague/commonmark"
             },
+=======
+                "docs": "https://commonmark.thephpleague.com/",
+                "issues": "https://github.com/thephpleague/commonmark/issues",
+                "rss": "https://github.com/thephpleague/commonmark/releases.atom",
+                "source": "https://github.com/thephpleague/commonmark"
+            },
+>>>>>>> Stashed changes
             "funding": [
                 {
                     "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
