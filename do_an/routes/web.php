@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\postController;
-use App\Http\Controllers\profileController;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,11 +16,14 @@ use App\Http\Controllers\profileController;
 */
 
 
-Route::resource('/profile', postController::class);
+// Route::get('/post/create', [postController::class,'create'])->name('post.create');
 
-Route::get('/edit', function () {
-    return view('profile.edit');
-});
+// Route::post('/post', [postController::class,'store'])->name('post.store');
+
+Route::resource('/post',postController::class);
+// Route::get('/edit', function () {
+//     return view('profile.edit');
+// });
 
 // Route::get('/', function () {
 //     return view('home');
@@ -28,9 +31,6 @@ Route::get('/edit', function () {
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/user',UserController::class);

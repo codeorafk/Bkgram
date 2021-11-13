@@ -5,8 +5,12 @@
 </div>
 <div class="information col-md-8">
   <div class="container_1">
-    <h2> {{auth::user()->name}} </h2>
-    <a href="profile/create"> Edit profile</a>
+    <h2> {{$users->name}} </h2>
+    @can('update',$users)
+      <a href="{{route('user.edit',Auth::user()->id)}}"> Edit profile</a>
+    @else
+      <button class='btn btn-primary' style="margin-left: 50px"> Follow </button>
+    @endcan
   </div>
   <ul class="container_2">
     <li class="n_posts">
@@ -23,8 +27,8 @@
     </li>
   </ul>
   <div class="bio">
-    <span class="bold">Nguyen Tran Quoc Uy</span>
+    <span class="bold">{{$users->username}}</span>
     <br>
-    <span>This is Instagram</span>
+    <span> {{$users->bio}}</span>
   </div>
 </div>

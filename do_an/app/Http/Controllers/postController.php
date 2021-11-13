@@ -13,6 +13,11 @@ class postController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $posts = post::all();
@@ -39,12 +44,11 @@ class postController extends Controller
     {
         $newImageName = time() .'.'. $request->image->extension();
         $request->image->move(public_path('images'),$newImageName);
-        $posts = post::create([  
-            'username' => $request->input('username'),
-            'n_likes' => $request->input('n_likes'),
+        $posts = auth()->user()->posts()->create([  
             'description' => $request->input('description'),
             'image_path' => $newImageName
         ]);
+        return redirect('/user/'.auth()->user()->id);
     }
 
     /**
@@ -66,7 +70,7 @@ class postController extends Controller
      */
     public function edit($id)
     {
-        $posts = post::find($id)->first();
+        $posts = post::find($id);
         return view('post.edit',['posts'=>$posts]);
     }
 
@@ -79,13 +83,14 @@ class postController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $newImageName = time() .'.'. $request->image->extension();
+        $request->image->move(public_path('images'),$newImageName);
         $posts = post::where('id', $id)
             ->update([  
-            'username' => $request->input('username'),
-            'n_likes' => $request->input('n_likes'),
             'description' => $request->input('description'),
+            'image_path' => $newImageName,
         ]);
-        return redirect('/profile');
+        return redirect('/user/'.auth()->user()->id);
     }
 
     /**
@@ -96,9 +101,9 @@ class postController extends Controller
      */
     public function destroy($id)
     {
-        $posts = post::find($id)->first();
+        $posts = post::find($id);
         $posts->delete();
 
-        return redirect('/profile');
+        return redirect('/user/'.auth()->user()->id);
     }
 }
