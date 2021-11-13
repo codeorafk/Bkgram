@@ -1,22 +1,28 @@
 @extends('app')
 
 @section('content')
-    <div>
-        <div class="text-center">
-            <h1>update Post</h1>
-        </div>
+<div class="row">
+    <div class="col-5 sidebar">
+    <div class="img">
+        <img class="card-img-top" src="{{asset('images/'.$posts->image_path)}}" alt="Card image" style="width:100%">
     </div>
-
-    <div>
-        <form action ="/profile/{{ $posts->id}}" method="POST">
+    </div>
+    <div class="col-7" style="padding-left: 50px">
+        <form action ="{{route('post.update',$posts->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="block">
-                <input type="text" name="username" value="{{$posts->username}}">
-                <input type="text" name="n_likes" value="{{$posts->n_likes}}">
-                <input type="text" name="description" value="{{$posts->description}}">
-                <button type="submit"> submit</button>
+            <div class="row">
+                <label class="form-text"> Image</label>
+                <input type="file" class="form-input" name="image">
+                </div>
+                <div class="row">
+                <lable class="form-text"> description</lable>
+                <textarea class="form-input" type="text" name="description" placeholder="{{$posts->description}}"></textarea>
+                </div>
+                <div class="submit">
+                <button type="submit"> submit</button>  
             </div>
         </form>
     </div>
+</div>
 @endsection('content')

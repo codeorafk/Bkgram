@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\post;
 
+
 class postController extends Controller
 {
     /**
@@ -12,9 +13,15 @@ class postController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
+        $posts = post::all();
+        return view('post.profile', ['posts'=> $posts]);
     }
 
     /**
@@ -24,7 +31,7 @@ class postController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -35,7 +42,13 @@ class postController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newImageName = time() .'.'. $request->image->extension();
+        $request->image->move(public_path('images'),$newImageName);
+        $posts = auth()->user()->posts()->create([  
+            'description' => $request->input('description'),
+            'image_path' => $newImageName
+        ]);
+        return redirect('/user/'.auth()->user()->id);
     }
 
     /**
@@ -57,7 +70,8 @@ class postController extends Controller
      */
     public function edit($id)
     {
-        //
+        $posts = post::find($id);
+        return view('post.edit',['posts'=>$posts]);
     }
 
     /**
@@ -69,7 +83,14 @@ class postController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $newImageName = time() .'.'. $request->image->extension();
+        $request->image->move(public_path('images'),$newImageName);
+        $posts = post::where('id', $id)
+            ->update([  
+            'description' => $request->input('description'),
+            'image_path' => $newImageName,
+        ]);
+        return redirect('/user/'.auth()->user()->id);
     }
 
     /**
@@ -80,6 +101,9 @@ class postController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $posts = post::find($id);
+        $posts->delete();
+
+        return redirect('/user/'.auth()->user()->id);
     }
 }

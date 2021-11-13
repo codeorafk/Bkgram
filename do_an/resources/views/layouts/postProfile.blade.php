@@ -1,9 +1,9 @@
-       
+     
 @foreach($posts as $posts)    
     <div class= "col-sm-4">
 
       <!-- Trigger the modal with a button -->
-      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#Modal_{{$posts->id}}"><img class="card-img" src="https://previews.123rf.com/images/uniyok/uniyok1711/uniyok171100022/89491020-template-design-square-banner-with-pop-texture-background-poster-for-offer-and-presentation-on-abstr.jpg" alt="Card image" style="width:100%" /></button>
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#Modal_{{$posts->id}}"><img class="card-img" src="{{asset('images/'.$posts->image_path)}}" alt="Card image" style="width:100%" /></button>
 
                     <!-- Modal -->
       <div class="modal" id="Modal_{{$posts->id}}">
@@ -14,7 +14,7 @@
               <div class="row">
                 <div class = "col-lg-7 col-md-6 col-12">
                   <div class="img">
-                    <img class="card-img-top" src="https://previews.123rf.com/images/uniyok/uniyok1711/uniyok171100022/89491020-template-design-square-banner-with-pop-texture-background-poster-for-offer-and-presentation-on-abstr.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="{{asset('images/'.$posts->image_path)}}" alt="Card image" style="width:100%">
                   </div>
                 </div>
                 <div class= "col-lg-5 col-md-6 col-12">
@@ -26,10 +26,11 @@
                             &emsp;
                           </span>
                         <span>
-                          <p> UowY </p>
+                          <p> {{ $users->name }} </p>
                         </span>
                       </div>
                       <div class="col-1">
+                        @can('update',$users)
                         <div class="dropdown">
                           <button class="dropbtn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
@@ -37,14 +38,15 @@
                             </svg>
                           </button>
                           <div class="dropdown-content">
-                            <a href="profile/{{$posts->id}}/edit">edit</a>
-                            <form action="profile/{{$posts->id}}" method="POST">
+                            <a href="{{route('post.edit', $posts->id)}}">edit</a>
+                            <form action="{{route('post.destroy', $posts->id)}}" method="POST">
                               @csrf
                               @method('delete')
                               <button type="submit">delete</button>
                             </form>
                           </div>
                         </div> 
+                        @endcan
                       </div> 
                     </div>
                     <p class="card-text"><span class="bold">{{$posts->username}} </span> {{$posts->description}} </p>
@@ -57,7 +59,7 @@
                       <button class="save-icon" type="button">
                       </button>
                     </div>
-                    <p class="card-text"><span class="bold">{{$posts->n_likes}} likes</span></p>
+                    <p class="card-text"><span class="bold">12 likes</span></p>
                     <input class="form-control" type="text" placeholder="Add a comment..." value="">
                   </div>
                 </div>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/do_an/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/do_an/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/do_an/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/do_an/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/do_an/vendor/theseer/tokenizer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

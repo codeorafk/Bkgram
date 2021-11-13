@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="col-8">
-  <p> UowY </p>
+  <p> {{ Auth::user()->name }} </p>
 </div>
 <div class="col-2" style="padding: 0px">
   <button class="follow-btn"> Follow </button>

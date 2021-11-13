@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class post extends Model
+class Post extends Model
 {
     use HasFactory;
 
@@ -13,5 +13,9 @@ class post extends Model
     
     protected $primarykey = 'id';
 
-    protected $fillable = ['username', 'n_likes', 'description'];
+    protected $fillable = ['image_path', 'description'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
