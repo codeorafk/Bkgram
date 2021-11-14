@@ -1,4 +1,4 @@
-       
+     
 @foreach($posts as $posts)    
     <div class= "col-sm-4">
 
@@ -26,10 +26,11 @@
                             &emsp;
                           </span>
                         <span>
-                          <p> {{ Auth::user()->name }} </p>
+                          <p> {{ $users->name }} </p>
                         </span>
                       </div>
                       <div class="col-1">
+                        @can('update',$users)
                         <div class="dropdown">
                           <button class="dropbtn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
@@ -37,14 +38,15 @@
                             </svg>
                           </button>
                           <div class="dropdown-content">
-                            <a href="profile/{{$posts->id}}/edit">edit</a>
-                            <form action="profile/{{$posts->id}}" method="POST">
+                            <a href="{{route('post.edit', $posts->id)}}">edit</a>
+                            <form action="{{route('post.destroy', $posts->id)}}" method="POST">
                               @csrf
                               @method('delete')
                               <button type="submit">delete</button>
                             </form>
                           </div>
                         </div> 
+                        @endcan
                       </div> 
                     </div>
                     <p class="card-text"><span class="bold">{{$posts->username}} </span> {{$posts->description}} </p>
@@ -57,7 +59,7 @@
                       <button class="save-icon" type="button">
                       </button>
                     </div>
-                    <p class="card-text"><span class="bold">{{$posts->n_likes}} likes</span></p>
+                    <p class="card-text"><span class="bold">12 likes</span></p>
                     <input class="form-control" type="text" placeholder="Add a comment..." value="">
                   </div>
                 </div>

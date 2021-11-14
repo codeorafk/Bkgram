@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< HEAD
         'reference' => 'e48a27d59c8a0b6127b06f10a146953b46a70fc0',
+=======
+        'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
+>>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -391,7 +395,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< HEAD
             'reference' => 'e48a27d59c8a0b6127b06f10a146953b46a70fc0',
+=======
+            'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
+>>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -437,7 +445,7 @@
             'install_path' => __DIR__ . '/../laravel/ui',
             'aliases' => array(),
             'reference' => '28f3d190fe270b6dcd6fdab4a77a392e693ceca5',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'league/commonmark' => array(
             'pretty_version' => '1.6.6',
