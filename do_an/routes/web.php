@@ -25,9 +25,9 @@ Route::resource('/post',postController::class);
 //     return view('profile.edit');
 // });
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
