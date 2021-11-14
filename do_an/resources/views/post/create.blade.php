@@ -6,7 +6,6 @@
       <ul>
         <li> <a href="{{route('user.edit',Auth::user()->id)}}"> edit profile</a></li>
         <li> <a href="{{route('post.create')}}" class="bold"> add post </a></li>
-        <li> <a href="{{route('')}}"> change password </a></li>
       </ul>
     </div>
     <div class="col-9" style="padding-left: 50px">

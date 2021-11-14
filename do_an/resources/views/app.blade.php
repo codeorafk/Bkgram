@@ -6,10 +6,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <title>Instagram</title>
     <link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}"> 
-
-    <script src="{{ asset('js/app.js') }}" defer>
-    </script>
+    <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}">
   </head>
   <body>
     <div class="navigation">
