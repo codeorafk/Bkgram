@@ -9,12 +9,14 @@
     @can('update',$users)
       <a href="{{route('user.edit',Auth::user()->id)}}"> Edit profile</a>
     @else
-      <button class='btn btn-primary' style="margin-left: 50px"> Follow </button>
-    @endcan
+    <div id="app">
+      <follow-button></follow-button>
+    </div>
+    @endcan   
   </div>
   <ul class="container_2">
     <li class="n_posts">
-      <span class="bold"> 3</span>
+      <span class="bold"> {{$posts->count()}}</span>
       <span> posts</span>
     </li>
     <li class="n_followers">
