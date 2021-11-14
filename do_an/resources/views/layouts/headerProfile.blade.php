@@ -5,12 +5,18 @@
 </div>
 <div class="information col-md-8">
   <div class="container_1">
-    <h2> {{auth::user()->username}} </h2>
-    <a href="profile/create"> Edit profile</a>
+    <h2> {{$users->name}} </h2>
+    @can('update',$users)
+      <a href="{{route('user.edit',Auth::user()->id)}}"> Edit profile</a>
+    @else
+    <div id="app">
+      <follow-button></follow-button>
+    </div>
+    @endcan   
   </div>
   <ul class="container_2">
     <li class="n_posts">
-      <span class="bold"> 3</span>
+      <span class="bold"> {{$posts->count()}}</span>
       <span> posts</span>
     </li>
     <li class="n_followers">
@@ -23,8 +29,8 @@
     </li>
   </ul>
   <div class="bio">
-    <span class="bold">Nguyen Tran Quoc Uy</span>
+    <span class="bold">{{$users->username}}</span>
     <br>
-    <span>This is Instagram</span>
+    <span> {{$users->bio}}</span>
   </div>
 </div>

@@ -6,7 +6,11 @@
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
 <<<<<<< HEAD
+<<<<<<< HEAD
         'reference' => 'e48a27d59c8a0b6127b06f10a146953b46a70fc0',
+=======
+        'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
+>>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
 =======
         'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
 >>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
@@ -396,7 +400,11 @@
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'reference' => 'e48a27d59c8a0b6127b06f10a146953b46a70fc0',
+=======
+            'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
+>>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
 =======
             'reference' => 'a568393f575a960c9ac07b6082cc4603499e646f',
 >>>>>>> 2145eb5cff092802d99d2d7b00f11051b93a54dd
