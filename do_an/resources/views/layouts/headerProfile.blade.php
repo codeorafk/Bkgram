@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="avatar">
-    <img class="card-img" src="https://img.freepik.com/free-psd/social-media-post-template-square-flyer_169869-538.jpg?size=626&ext=jpg" alt="avatar">
+    <img class="card-img" src={{asset('images/'.$users->image_path)}} alt="avatar">
   </div>
 </div>
 <div class="information col-md-8">
