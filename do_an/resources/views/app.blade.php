@@ -7,17 +7,19 @@
 	  <title>Instagram</title>
     <link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}"> 
-
-    <script src="{{ asset('js/app.js') }}" defer>
-    </script>
+    {{-- <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" /> --}}
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/cjs/popper.js.map"></script> --}}
   </head>
   <body>
     <div class="navigation">
       @include('layouts.nav')
     </div>
     <div class="container">
-      @yield('content')  
+      <div class="app">  
+        @yield('content')
+      </div>
     </div>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('js/app.js') }}" type="text/javascript"></script>
   </body>
 </html>

@@ -24,7 +24,11 @@ class UserController extends Controller
                 ->select('users.*', 'posts.*')
                 ->where('users.id',$id)
                 ->get();
-        return view('profile.show', ['users' =>$users, 'posts'=> $posts]);
+        $check = DB::table('user_user')->where('user_id',auth()->user()->id)->where('profile_id',$id)->get();
+        $follows = isset($check[0]->id)? true : false;
+        $nfollowers = DB::table('user_user')->where('profile_id',$id)->get()->count();
+        $nfollowing = DB::table('user_user')->where('user_id',$id)->get()->count();
+        return view('profile.show', ['users' =>$users, 'posts'=> $posts, 'follows' => $follows, 'nfollowing' => $nfollowing, 'nfollowers' =>$nfollowers]);
     }
 
     public function edit($id)
@@ -51,5 +55,11 @@ class UserController extends Controller
         ]);
 
         return redirect(route('user.show',$users));
+    }
+
+    public function authenticate($id){
+        if($id == auth()->user()->id)
+            return "true";
+        return "false";
     }
 }

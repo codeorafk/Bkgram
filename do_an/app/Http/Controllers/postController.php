@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\post;
-
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
 
 class postController extends Controller
 {
@@ -105,5 +107,14 @@ class postController extends Controller
         $posts->delete();
 
         return redirect('/user/'.auth()->user()->id);
+    }
+
+    public function getPost($id){
+        $posts = DB::table('users')
+                ->join('posts', 'users.id', '=', 'posts.user_id')
+                ->select('users.username','users.id', 'posts.*')
+                ->where('users.id',$id)
+                ->get();
+        return $posts;
     }
 }

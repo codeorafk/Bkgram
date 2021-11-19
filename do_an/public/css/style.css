@@ -146,6 +146,15 @@ section{
   width: 25px;
   margin-right:20px;
 }
+.heart-icon-active{
+  background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905107429304467506/heartfilled.png');
+  background-color: #fafafa;
+  border: 0px;
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  margin-right:20px;
+}
 .heart-icon:hover{
   background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905107429304467506/heartfilled.png');
   background-color: #fafafa;
