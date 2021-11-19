@@ -13,15 +13,18 @@
     @endif
 </div>
   @else
-  <div class="navigation-search-container">
-  <i class="fa fa-search"></i>
-  <input class="search-field" type="text" placeholder="Search">
-  <div class="search-container">
-    <div class="search-container-box">
-      <div class="search-results">
+<div class="navigation-search-container">
+  <form action="{{route('search')}}" method="POST">
+    @csrf
+    <i class="fa fa-search"></i>
+    <input class="search-field" name="search" type="text" placeholder="Search">
+    <div class="search-container">
+      <div class="search-container-box">
+        <div class="search-results">
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 <div class="navigation-icons">
   <a href="{{route('home')}}" class="navigation-link">

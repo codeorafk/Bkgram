@@ -23,6 +23,9 @@ Vue.component('follow-button', require('./components/FollowButton.vue').default)
 Vue.component('like-button', require('./components/LikeButton.vue').default);
 Vue.component('thread-view', require('./components/threadView.vue').default);
 Vue.component('single-post', require('./components/SinglePost.vue').default);
+Vue.component('re-render', require('./components/Rerender.vue').default);
+Vue.component('show-profile', require('./components/showProfile.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

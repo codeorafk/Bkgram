@@ -1,3 +1,4 @@
+
 <template>
     <div class= "col-sm-4"> 
       <!-- Trigger the modal with a button -->
@@ -49,7 +50,7 @@
                         <button class="save-icon" type="button">
                         </button>
                       </div>
-                      <p class="card-text"><span class="bold">{{n_likes}} likes</span></p>
+                      <p class="card-text"><span class="bold" :key="n_likes">{{n_likes}} likes</span></p>
                       <input class="form-control" type="text" placeholder="Add a comment..." value="">
                     </div>
                   </div>
@@ -65,28 +66,28 @@
 <script>
     export default {
       props: ['postId','username','desc','imageSrc','auth'],
+      mounted(){
+        this.getN_likes();
+        this.timer = setInterval(this.getN_likes, 3000);
+      },
       data: function(){
         return {
             image_src: this.imageSrc,
             n_likes: 0,
         }
       },
-
-      mounted(){
-        console.log('Component mounted. single');
-        axios.post('/n_like/'+this.postId)
+      methods: {
+        canUpdate() {
+            return this.auth;
+        },
+        getN_likes(){
+          axios.post('/n_like/'+this.postId)
             .then((response) =>{
-              console.log('n_like:'+response.data);
               this.n_likes = response.data;
             })
             .catch(function(error){
               console.log(error);
             })
-      },
-
-      methods: {
-        canUpdate() {
-            return this.auth;
         }
       }
     }
