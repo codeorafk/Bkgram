@@ -47,6 +47,7 @@ Route::post('like/{id}',[LikesController::class, 'store']);
 Route::post('likeShow/{id}',[LikesController::class, 'show']);
 Route::post('n_like/{id}',[LikesController::class, 'getn_Likes']);
 Route::post('posts/{id}',[postController::class, 'getPost']);
+Route::post('postsHome/{id}',[postController::class, 'getPostHome']);
 Route::post('authentication/{id}',[UserController::class, 'authenticate']);
 Route::post('/info/{id}',[UserController::class, 'info']);
 Route::post('/search',[UserController::class, 'search'])->name('search');

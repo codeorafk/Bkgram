@@ -117,4 +117,14 @@ class postController extends Controller
                 ->get();
         return $posts;
     }
+    public function getPostHome($id){
+        $Postfollowing = DB::table('user_user')
+                    ->join('posts', 'user_user.profile_id', '=', 'posts.user_id')
+                    ->join('users', 'user_user.profile_id','=', 'users.id')
+                    ->select('user_user.*', 'posts.*','users.name')
+                    ->where('user_user.user_id',$id)
+                    ->orderBy('posts.updated_at', 'DESC')
+                    ->get();
+        return $Postfollowing;
+    }
 }

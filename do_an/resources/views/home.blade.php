@@ -17,18 +17,16 @@
       @include('layouts.nav')
     </div>
     <section>
-      <div class="col-md-8 col-sm-12">
-        <div class="post">
+      <div class="app row">  
+        <div class="col-md-8">
           @include('layouts.post')
         </div>
-        <div class="post">
-          @include('layouts.post')
+        <div class="col-md-4">
+          @include('layouts.listFollow')
         </div>
-      </div>
-      <div class="col-md-4">
-        @include('layouts.listFollow')
       </div>
     </section>
-    <script src="{{asset('js/script.js')}}"></script> 
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('js/app.js') }}" type="text/javascript"></script>
   </body>
 </html>

@@ -22,7 +22,9 @@ window.Vue = require('vue').default;
 Vue.component('follow-button', require('./components/FollowButton.vue').default);
 Vue.component('like-button', require('./components/LikeButton.vue').default);
 Vue.component('thread-view', require('./components/threadView.vue').default);
+Vue.component('thread-view-home', require('./components/threadViewHome.vue').default);
 Vue.component('single-post', require('./components/SinglePost.vue').default);
+Vue.component('post-home', require('./components/PostHome.vue').default);
 Vue.component('re-render', require('./components/Rerender.vue').default);
 Vue.component('show-profile', require('./components/showProfile.vue').default);
 
