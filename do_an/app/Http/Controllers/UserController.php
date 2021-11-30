@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\post;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
-use Intervention\Image\Facades\Image;
+use Image;
 
 class UserController extends Controller
 {
@@ -43,13 +43,25 @@ class UserController extends Controller
         $users = User::find($id);
 
         $this->authorize('update', $users);
+        if($request->image == null){
+                User::where('id', $id)
+                ->update([  
+                'username' => $request->input('username'),
+                'bio' => $request->input('description'),
+            ]);
+
+            return redirect(route('user.show',$users));
+        }
+        $image = $request->file('image');
+
         $newImageName = time() .'.'. $request->image->extension();
-        $request->image->move(public_path('images'),$newImageName);
+        $image_resize = Image::make($image->path());
+        $image_resize->fit(1200, 1200)->save(public_path().'/images/'.$newImageName);
         User::where('id', $id)
             ->update([  
             'username' => $request->input('username'),
             'bio' => $request->input('description'),
-            'image_path' => $newImageName,
+            'imagePath' => $newImageName,
         ]);
 
         return redirect(route('user.show',$users));

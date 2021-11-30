@@ -1,8 +1,8 @@
 
 
 <template>
-  <div class="row">
-      <single-post v-for="post in posts" v-bind:key="post.id" v-bind:post-id="post.id" v-bind:username="post.username" v-bind:desc="post.description" v-bind:image-src="post.image_path" v-bind:auth="authentication"></single-post>
+  <div class="posts_profile row">
+      <single-post v-for="post in posts" v-bind:key="post.id" v-bind:post-id="post.id" v-bind:username="post.name" v-bind:image-path="post.imagePath" v-bind:desc="post.description" v-bind:image-src="post.image_path" v-bind:auth="authentication"></single-post>
   </div>    
 </template>
 

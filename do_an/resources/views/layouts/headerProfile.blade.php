@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="avatar">
-    <img class="card-img" src={{asset('images/'.$users->image_path)}} alt="avatar" style="border: 2px solid grey">
+    <img class="card-img" src={{asset('images/'.$users->imagePath)}} alt="avatar" style="border: 2px solid grey">
   </div>
 </div>
 <div class="information col-md-8">

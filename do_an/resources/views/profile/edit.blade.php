@@ -17,23 +17,26 @@
         <div class="row">
           <div class="col-md-2">
             <div class="avatar">
-              <img class="card-img" src="{{asset('images/'.$users->image_path)}}" alt="avatar">
+              <img class="card-img" src="{{asset('images/'.$users->imagePath)}}" alt="avatar">
             </div>
           </div>
           <div class="information col-md-10">
             <div>
               <h2 style="margin-right: 15px;margin-bottom: 0px;font-size: 28px;line-height: 32px;font-weight: 300;"> {{$users->name}} </h2>
-              <input type="file" class="form-input" name="image">
+              <label for="file-upload" class="custom-file-upload">
+                Change profile photo
+              </label>
+              <input hidden id="file-upload" type="file" class="form-input" name="image">
             </div>
           </div>
         </div>
         <div class="row">
           <label class="form-text"> username</label>
-          <input class="form-input" type="text" name="username" placeholder="username">
+          <input class="form-input" type="text" name="username" placeholder="username" value="{{Auth::user()->username}}">
         </div>
         <div class="row">
           <label class="form-text"> description</label>
-          <textarea class="form-input" type="text" name="description" placeholder="description"></textarea>
+          <textarea class="form-input" type="text" name="description" placeholder="description">{{$users->bio}}</textarea>
         </div>
         <div class="submit">
           <button type="submit"> submit</button>  

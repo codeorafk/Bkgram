@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <title>BKgram</title>
+    <link rel="shortcut icon" href="{{asset('images/HCMUT_official_logo.png')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}"> 
     {{-- <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" /> --}}

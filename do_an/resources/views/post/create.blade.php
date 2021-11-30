@@ -17,7 +17,7 @@
           <input type="file" class="form-input" name="image">
         </div>
         <div class="row">
-          <lable class="form-text"> description</lable>
+          <label class="form-text"> description</label>
           <textarea class="form-input" type="text" name="description" placeholder="description"></textarea>
         </div>
         <div class="submit">
