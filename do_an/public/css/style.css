@@ -131,6 +131,7 @@ section{
 
 .post{
   border: 0.8px solid #dedede;
+  margin: 20px, 0;
 }
 
 .icons{
@@ -146,7 +147,7 @@ section{
   width: 25px;
   margin-right:20px;
 }
-.heart-icon:hover{
+.heart-icon-active{
   background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905107429304467506/heartfilled.png');
   background-color: #fafafa;
   border: 0px;
@@ -154,8 +155,16 @@ section{
   height: 25px;
   width: 25px;
   margin-right:20px;
-
 }
+/* .heart-icon:hover{
+  background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905107429304467506/heartfilled.png');
+  background-color: #fafafa;
+  border: 0px;
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  margin-right:20px;
+} */
 
 .comment-icon{
   background-image: url('https://cdn2.iconfinder.com/data/icons/medical-healthcare-26/28/Chat-2-512.png');
@@ -167,7 +176,7 @@ section{
   margin-right:20px;
 }
 
-.comment-icon:hover{
+/* .comment-icon:hover{
   background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905099664125218816/comment.png');
   background-color: #fafafa;
   border: 0px;
@@ -175,7 +184,7 @@ section{
   height: 25px;
   width: 25px;
   margin-right:20px;
-}
+} */
 
 .save-icon{
   background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905103494418165860/share.png');
@@ -187,7 +196,7 @@ section{
   margin-right:20px;
 }
 
-.save-icon:hover{
+/* .save-icon:hover{
   background-image: url('https://cdn.discordapp.com/attachments/864236397430177793/905104160251346954/share-filled.png');
   background-color: #fafafa;
   border: 0px;
@@ -195,7 +204,7 @@ section{
   height: 25px;
   width: 25px;
   margin-right:20px;
-}
+} */
 
 .container{
   margin: 100px auto;
@@ -259,6 +268,7 @@ section{
 
 .posts_profile{
   margin: 30px 0px;
+  width: 100%;
 }
 
 .modal-dialog{
@@ -396,5 +406,22 @@ ul{
   border: 2px solid #e6e6e6;
   border-radius: 5%;
 }
+
+.custom-file-upload{
+  color: #007bff;
+  text-decoration: none;
+}
+
+.custom-file-upload:hover{
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.comment-area{
+  border-top: 0.8px solid #dedede;
+  margin: 0 -15px;
+}
+
+
 
 

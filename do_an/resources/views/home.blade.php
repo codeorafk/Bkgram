@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <title>Bkgram</title>
+    <link rel="shortcut icon" href="{{asset('images/HCMUT_official_logo.png')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}">
     <style>
@@ -17,18 +18,16 @@
       @include('layouts.nav')
     </div>
     <section>
-      <div class="col-md-8 col-sm-12">
-        <div class="post">
+      <div class="app row col-12">  
+        <div class="col-md-8">
           @include('layouts.post')
         </div>
-        <div class="post">
-          @include('layouts.post')
+        <div class="col-md-4">
+          @include('layouts.listFollow')
         </div>
-      </div>
-      <div class="col-md-4">
-        @include('layouts.listFollow')
       </div>
     </section>
-    <script src="{{asset('js/script.js')}}"></script> 
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('js/app.js') }}" type="text/javascript"></script>
   </body>
 </html>
